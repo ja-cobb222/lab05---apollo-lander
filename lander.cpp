@@ -63,9 +63,8 @@ Acceleration Lander::input(const Thrust& thrust, double gravity)
 
 void Lander::coast(Acceleration& acceleration, double time)
 {
-   // Update velocity with acceleration over time
-   velocity.add(acceleration, time);
-
    // Update position 
    pos.add(acceleration, velocity, time);
+
+   velocity.add(acceleration, time);
 }

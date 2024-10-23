@@ -45,7 +45,7 @@ void Simulator::update(const Interface* pUI, double time)
 {
    Thrust thrust;
    thrust.set(pUI);   
-   double gravity = 1.625; // Moon's gravity in m/s^2
+   double gravity = -1.625; // Moon's gravity in m/s^2
    Acceleration acceleration = lander.input(thrust, gravity);
    lander.coast(acceleration, time);
 }
